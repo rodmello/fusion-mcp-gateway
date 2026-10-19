@@ -1,0 +1,44 @@
+
+{
+  "contract_id": "fusion.erp.payables.invoices",
+  "contract_version": "1.0.0",
+  "source": {
+    "vendor": "Oracle",
+    "product": "Fusion Cloud ERP",
+    "module": "Payables",
+    "api_type": "REST",
+    "origin": "LAB_SIMULATION",
+    "fusion_release": null
+  },
+  "resource": {
+    "name": "invoices",
+    "base_path": "/fscmRestApi/resources/11.13.18.05/invoices",
+    "operations": [
+      {
+        "operation_id": "get_invoice",
+        "method": "GET",
+        "path": "/{invoice_id}",
+        "description": "Consulta uma fatura pelo identificador",
+        "parameters": [
+          {
+            "name": "invoice_id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          }
+        ],
+        "response": {
+          "type": "object",
+          "properties": {
+            "invoice_id": "integer",
+            "invoice_number": "string",
+            "supplier": "string",
+            "amount": "number",
+            "currency": "string",
+            "status": "string"
+          }
+        }
+      }
+    ]
+  }
+}
